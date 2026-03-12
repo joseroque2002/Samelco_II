@@ -5432,18 +5432,23 @@ body.page-user-dashboard .user-panel-form {
 
 @media (max-width: 1080px) {
   .user-hero,
-  .user-dashboard-grid {
+  body.page-user-dashboard .user-hero,
+  .user-dashboard-grid,
+  body.page-user-dashboard .user-dashboard-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 720px) {
-  .user-dashboard-main {
+  .user-dashboard-main,
+  body.page-user-dashboard .user-dashboard-main {
     padding: 6.7rem 1rem 2rem;
   }
 
   .user-hero-copy,
+  body.page-user-dashboard .user-hero-copy,
   .user-panel,
+  body.page-user-dashboard .user-panel,
   .user-panel-form {
     padding: 1.2rem;
   }
