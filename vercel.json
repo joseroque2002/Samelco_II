@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "^/$", "dest": "/html/index.html" },
+    { "src": "^/(.*)\\.html$", "dest": "/html/$1.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "no-referrer-when-downgrade" }
+      ]
+    }
+  ]
+}
